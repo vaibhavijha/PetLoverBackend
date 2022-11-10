@@ -6,9 +6,7 @@ const app = express();
 const dbConnectNoSql = require("./config/mongo");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
-app.use(cors({
-    origin: 'https://petlover21.netlify.app'
-}));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser(sessionSecret));
 app.use(express.urlencoded({ extended: false }));
